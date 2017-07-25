@@ -1,0 +1,16 @@
+# exemple de scène pour SRay
+
+RT
+{
+	width : 32
+	height : 32
+	nrec : 6
+	kambient:0#.2
+	ambient : 167 211 255
+
+}
+CAMERA
+{
+	pos : 0 5 -40
+	dir : 0 0 0
+}

@@ -1,0 +1,134 @@
+# exemple de scène pour SRay
+
+RT
+{
+	width : 320
+	height : 240
+#aa_level:30
+aa_level:2
+}
+CAMERA
+{
+	pos : 0 10 -40
+	dir : 0 10 0
+	#hfov:45
+	#vfov:25
+}
+PLAN
+{
+	name: bas
+	mat : blanc
+	normal : 0 1 0
+	distance : 0
+}
+PLAN
+{
+	name: haut
+	mat : blanc
+	normal : 0 -1 0
+	distance : -20
+}
+PLAN
+{
+	name: gauche
+	mat : rouge
+	normal : 1 0 0
+	distance : -10
+}
+PLAN
+{
+	name: droite
+	mat : vert
+	normal : -1 0 0
+	distance : -10
+}
+PLAN
+{
+	name: fond
+	mat : blanc
+	normal : 0 0 -1
+	distance : -20
+}
+
+SPHERE
+{
+	name:sphere_miroir
+	center : -4 3 10
+	mat : chrome
+	radius: 3
+}
+
+SPHERE
+{
+	name:sphere_verre
+	center : 3.5 6 3
+	mat : verre
+	radius: 4.5
+}
+
+SPHERE
+{
+	name:sphere_bleue
+	#center : 0 7 15
+	center : 8 12 15
+	mat : bleu
+	radius: 2
+}
+
+ALIGHT
+{
+	pos : 0 19 0
+	size : 2
+	normal : 0 -1 0
+}
+MAT
+{
+	name : rouge
+	r : 193
+	g : 19
+	b : 20
+}
+MAT
+{
+	name : vert
+	r : 109#42
+	g : 200#97
+	b : 55#21
+}
+MAT
+{
+	name : bleu
+	r : 66
+	g : 128
+	b : 189
+}
+MAT
+{
+	name : blanc
+	r : 226
+	g : 187
+	b : 111
+}
+MAT
+{
+	name : verre
+	r : 0
+	g : 0
+	b : 0
+	krefrac : 1
+	#kspec : 0.01
+	n:1.8
+}
+MAT
+{
+	name : chrome
+	r : 0
+	g : 0
+	b : 0
+	kspec : 1
+}
+
+
+
+
+

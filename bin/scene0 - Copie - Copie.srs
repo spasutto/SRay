@@ -1,0 +1,45 @@
+# exemple de scène pour SRay
+
+RT
+{
+	width : 640
+	height : 480
+	nrec : 6
+kambient:0#.2
+ambient : 255 255 255
+
+}
+CAMERA
+{
+	pos : 0 10 -30
+	dir : 0 0 0
+}
+SPHERE
+{
+	name:sphere
+	center : 0 0 0
+	mat : rouge
+	radius: 9
+}
+PLAN
+{
+	mat : rouge
+	normal : 0 1 0
+	distance : -10
+}
+PLIGHT
+{
+	#pos : -20 80.0 -120
+	#pos : 100 100 -300
+	pos : -20 28.5 -30
+power: 1
+rgb : 255 255 255
+}
+MAT
+{
+	name : rouge
+	r : 255
+	g:255
+	b:255
+kspec : 0#1
+}

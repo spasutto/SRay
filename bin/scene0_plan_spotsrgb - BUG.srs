@@ -1,0 +1,48 @@
+# exemple de scène pour SRay
+
+RT
+{
+	width : 640
+	height : 480
+	nrec : 6
+	kambient:0#.2
+	ambient : 255 255 255
+
+}
+CAMERA
+{
+	pos : 0 50 0 # faire passer z à -1 et ça fonctionne
+	dir : 0 0 0
+}
+PLAN
+{
+	mat : blanc
+	normal : 0 1 0
+	distance : 0
+}
+PLIGHT
+{
+	pos : -3 10 0
+	power: 1#0.33
+	rgb : 255 0 0
+}
+PLIGHT
+{
+	pos : 3 10 0
+	power: 1#0.33
+	rgb : 0 255 0
+}
+PLIGHT
+{
+	pos : 0 10 8.49
+	power: 1#0.33
+	rgb : 0 0 255
+}
+MAT
+{
+	name : blanc
+	r : 255
+	g:255
+	b:255
+	#kshin : 15
+}

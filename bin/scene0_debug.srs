@@ -1,0 +1,16 @@
+RT
+{
+	width : 320
+	height : 240
+#aa_level:2
+}
+CAMERA
+{
+	pos : 0 0 -40
+	dir : 0 0 0
+	#hfov:45
+	#vfov:25
+}
+sphere
+{
+}

@@ -1,0 +1,98 @@
+# exemple de scène pour SRay
+
+RT
+{
+	width : 640
+	height : 480
+	nrec : 6
+	kAmbient: 0
+}
+CAMERA
+{
+	pos : -22 22 -82
+	dir : -22 22 -22
+}
+
+SPHERE
+{
+	name:sphere_rouge
+	center : 0 0 0
+	mat : rouge
+	radius: 25
+}
+
+SPHERE
+{
+	name:sphere_bleu
+	center : -22 22 -22
+	mat : bleu
+	radius: 10
+}
+
+
+SPHERE
+{
+	name: sphere_orange
+	center : -44 22 -30
+	mat : orange
+	radius: 10
+}
+
+SPHERE
+{
+	name:sphere_verte
+	center : 0 22 -22
+	mat : vert
+	radius: 10
+}
+PLAN
+{
+	name: plan
+	mat : rouge
+	normal : 0 1 0
+	distance : -25
+}
+
+MAT
+{
+	name  : rouge
+	r : 255
+	g : 0
+	b : 0
+}
+MAT
+{
+	name  : orange
+	r : 255
+	g : 180
+	b : 0
+}
+MAT
+{
+	name  : vert
+	r : 0
+	g : 255
+	b : 0
+	kRefrac : 1
+	n:1.52
+}
+MAT
+{
+	name  : bleu
+	r : 0
+	g : 0
+	b : 255
+	kReflec : 0.8
+	#kRefrac: 0.5
+}
+
+PLIGHT
+{
+	pos : -80 80.0 120
+	power:0.8
+}
+PLIGHT
+{
+	pos : -80 80.0 -120
+	power:0.8
+}
