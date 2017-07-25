@@ -1,0 +1,52 @@
+Généralités Optique
+--------------------
+http://fr.wikipedia.org/wiki/Optique_g%C3%A9om%C3%A9trique
+http://fr.wikipedia.org/wiki/R%C3%A9flexion_optique#Les_deux_formes_de_la_r.C3.A9flexion
+http://fr.wikipedia.org/wiki/Lois_de_Snell-Descartes
+http://en.wikipedia.org/wiki/Ray_(optics)
+http://en.wikipedia.org/wiki/Rendering_equation
+
+
+G2néralités Ray Tracing
+------------------------
+http://www.scratchapixel.com/
+http://www.siggraph.org/education/materials/HyperGraph/raytrace/rtrace0.htm
+http://www.codermind.com/articles/Raytracer-in-C++-Introduction-What-is-ray-tracing.html
+http://www.scratchapixel.com/lessons/3d-basic-lessons/lesson-1-writing-a-simple-raytracer/implementing-the-raytracing-algorithm/
+http://dav.vador.raytracing.free.fr/tutorio/tuto1/index.html
+http://www.cs.unc.edu/~rademach/xroads-RT/RTarticle.html
+http://www.massal.net/article/raytrace/page1.html
+http://www.ccs.neu.edu/home/fell/CSU540/programs/RayTracingFormulas.htm
+http://gregory.corgie.free.fr/currentDotclear/index.php?post/2006/12/31/5--raytracing-lecon-2-gestion-des-intersections
+http://raphaello.univ-fcomte.fr/ig/raytracing/lancerderayons.htm
+
+
+intersection plan:
+--------------------------
+http://blogs.warwick.ac.uk/nickforrington/entry/raytracing_intersection_with/
+http://www710.univ-lyon1.fr/~jciehl/Public/educ/TSE/cm1.pdf
+http://www.ac-grenoble.fr/lycee/vincent.indy/IMG/pdf/droites_plans_espace.pdf
+http://www.flipcode.com/archives/reflection_transmission.pdf
+fast triangle intersection:
+http://www.graphics.cornell.edu/pubs/1997/MT97.html
+http://www.graphics.cornell.edu/pubs/1997/MT97.pdf
+
+photon mapping
+--------------------------
+http://web.cs.wpi.edu/~emmanuel/courses/cs563/write_ups/zackw/photon_mapping/PhotonMapping.html
+http://graphics.ucsd.edu/~henrik/papers/photon_map/
+http://www.cs.utexas.edu/~mechin/photon_mapping/photon_mapping.html
+http://graphics.ucsd.edu/~henrik/papers/rendering_caustics/rendering_caustics_gi96.pdf
+
+http://graphics.cs.uni-saarland.de/fileadmin/cguds/courses/ss10/ris/slides/RIS11PhotonMap.pdf
+
+radiosity
+--------------------------
+http://en.wikipedia.org/wiki/Radiosity_(3D_computer_graphics)
+http://freespace.virgin.net/hugo.elias/radiosity/radiosity.htm
+http://www.siggraph.org/education/materials/HyperGraph/radiosity/overview_1.htm
+
+OBJ Files:
+----------------
+http://people.sc.fsu.edu/~jburkardt/data/obj/obj.html
+

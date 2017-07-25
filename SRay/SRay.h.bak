@@ -1,0 +1,37 @@
+
+#pragma once
+
+#include "Common.h"
+#include "Scene.h"
+#include "Camera.h"
+#include "Ray.h"
+
+#include "Sphere.h"
+#include "Plan.h"
+#include "Cube.h"
+
+namespace SRay
+{
+
+class RayTracer
+{
+public:
+	RayTracer(uint pWidth=800, uint pHeight=600);
+	~RayTracer(void);
+	void init();
+	int Render(void);
+	void setScene(Scene *pScene) {m_scene = *pScene;}
+	Scene getScene() {return m_scene;}
+
+	inline ushort width() {return m_camera.m_viewplane.m_width;}
+	inline ushort height() {return m_camera.m_viewplane.m_height;}
+
+//protected:
+	color *m_image;
+
+protected:
+	Scene		m_scene;
+	Camera		m_camera;
+};
+
+}

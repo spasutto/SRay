@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="SRay">
+      <UniqueIdentifier>{8f9220a1-c216-4f23-a75e-2e7d87238d46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Parser">
+      <UniqueIdentifier>{79ef66a8-4763-4886-ba77-1c5d5b8946a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{01ef10e9-d1de-4a03-9e25-9ce30b57e997}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SRay\Objects">
+      <UniqueIdentifier>{225e2015-b961-42b2-b89f-e00e0ff70cd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility\MersenneTwister">
+      <UniqueIdentifier>{eb21d9f5-837b-482a-a843-74bf34b0a83a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Utility\Utility.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Parser\ObjFile.cpp">
+      <Filter>Parser</Filter>
+    </ClCompile>
+    <ClCompile Include="SRay\SRay.cpp">
+      <Filter>SRay</Filter>
+    </ClCompile>
+    <ClCompile Include="SRay\Scene.cpp">
+      <Filter>SRay</Filter>
+    </ClCompile>
+    <ClCompile Include="SRay\Ray.cpp">
+      <Filter>SRay</Filter>
+    </ClCompile>
+    <ClCompile Include="SRay\Common.cpp">
+      <Filter>SRay</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="Test1.cpp" />
+    <ClCompile Include="SRay\Cube.cpp">
+      <Filter>SRay\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="SRay\Cylinder.cpp">
+      <Filter>SRay\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="SRay\Plan.cpp">
+      <Filter>SRay\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="SRay\Shape.cpp">
+      <Filter>SRay\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="SRay\Sphere.cpp">
+      <Filter>SRay\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="SRay\Triangle.cpp">
+      <Filter>SRay\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="SRay\Mesh.cpp">
+      <Filter>SRay\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="SRay\Object.cpp">
+      <Filter>SRay\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="SRay\Material.cpp">
+      <Filter>SRay\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="SRay\Light.cpp">
+      <Filter>SRay\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Parser\SceneParser.cpp">
+      <Filter>Parser</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\Perlin.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\TGAWriter.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="SRay\Viewplane.cpp">
+      <Filter>SRay</Filter>
+    </ClCompile>
+    <ClCompile Include="SRay\PointLight.cpp">
+      <Filter>SRay\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="SRay\AreaLight.cpp">
+      <Filter>SRay\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\MersenneTwister\test_dSFMT.cpp">
+      <Filter>Utility\MersenneTwister</Filter>
+    </ClCompile>
+    <ClCompile Include="SRay\Camera.cpp">
+      <Filter>SRay</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\Random.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\MersenneTwister\dSFMT.cpp">
+      <Filter>Utility\MersenneTwister</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Utility\Utility.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Parser\ObjFile.h">
+      <Filter>Parser</Filter>
+    </ClInclude>
+    <ClInclude Include="SRay\SRay.h">
+      <Filter>SRay</Filter>
+    </ClInclude>
+    <ClInclude Include="SRay\Scene.h">
+      <Filter>SRay</Filter>
+    </ClInclude>
+    <ClInclude Include="SRay\Ray.h">
+      <Filter>SRay</Filter>
+    </ClInclude>
+    <ClInclude Include="SRay\Common.h">
+      <Filter>SRay</Filter>
+    </ClInclude>
+    <ClInclude Include="SRay\Camera.h">
+      <Filter>SRay</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="TestScenes.h" />
+    <ClInclude Include="SRay\Cube.h">
+      <Filter>SRay\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="SRay\Cylinder.h">
+      <Filter>SRay\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="SRay\Plan.h">
+      <Filter>SRay\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="SRay\Shape.h">
+      <Filter>SRay\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="SRay\Sphere.h">
+      <Filter>SRay\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="SRay\Triangle.h">
+      <Filter>SRay\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="SRay\Mesh.h">
+      <Filter>SRay\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="SRay\Object.h">
+      <Filter>SRay\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="SRay\Material.h">
+      <Filter>SRay\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="SRay\Light.h">
+      <Filter>SRay\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Parser\SceneParser.h">
+      <Filter>Parser</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Perlin.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Random.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\TGAWriter.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="SRay\Viewplane.h">
+      <Filter>SRay</Filter>
+    </ClInclude>
+    <ClInclude Include="SRay\PointLight.h">
+      <Filter>SRay\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="SRay\AreaLight.h">
+      <Filter>SRay\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\MersenneTwister\dSFMT.h">
+      <Filter>Utility\MersenneTwister</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\MersenneTwister\dSFMT-common.h">
+      <Filter>Utility\MersenneTwister</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\MersenneTwister\dSFMT-params.h">
+      <Filter>Utility\MersenneTwister</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\MersenneTwister\dSFMT-params19937.h">
+      <Filter>Utility\MersenneTwister</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+</Project>

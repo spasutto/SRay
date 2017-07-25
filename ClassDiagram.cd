@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SRay::Camera" Collapsed="true">
+    <Position X="10.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ADJCICCAEAAAAAAAYBAAAAkUEAAIgIIAQQIIBBAAAAg=</HashCode>
+      <FileName>SRay\Camera.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRay::Vector" Collapsed="true">
+    <Position X="14.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAEUUBAQBAAAAIAABAQEBgAQAAAAA=</HashCode>
+      <FileName>SRay\Common.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRay::ExtendedVector&lt;T&gt;" Collapsed="true">
+    <Position X="1.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAQAAA=</HashCode>
+      <FileName>SRay\Common.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRay::ObjVector&lt;T&gt;" Collapsed="true">
+    <Position X="1.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SRay\Common.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRay::Ray" Collapsed="true">
+    <Position X="16" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAACAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SRay\Ray.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRay::Scene" Collapsed="true">
+    <Position X="12.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAIAAAAAAAAAAAAAgAAAAAAAwAEAIAAIAAAAAAAAAAA=</HashCode>
+      <FileName>SRay\Scene.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRay::RayTracer" Collapsed="true">
+    <Position X="10.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wACADQgAACAAgKIhAgAAgAAggAAIwIYEABAAAgAAAAA=</HashCode>
+      <FileName>SRay\SRay.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRay::Viewplane" Collapsed="true">
+    <Position X="16" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAgAAABAAABAAAAAIAAAAKEAAAAAAAAAAQ=</HashCode>
+      <FileName>SRay\Viewplane.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRay::AreaLight" Collapsed="true">
+    <Position X="12.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GAAAAACAAAAIAIgAIoAAAAgAAgAAAAAAAAACQAIAAAA=</HashCode>
+      <FileName>SRay\AreaLight.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRay::Cube" Collapsed="true">
+    <Position X="5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAEAAAAAAAIAAABAAACAAAAAAA=</HashCode>
+      <FileName>SRay\Cube.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRay::Cylinder" Collapsed="true">
+    <Position X="6.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IABAAAAAABAAAAABAAAEAAAAAAAIAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>SRay\Cylinder.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRay::Light" Collapsed="true">
+    <Position X="13" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAgAAAgAAABAAAAAAYAkICAA=</HashCode>
+      <FileName>SRay\Light.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRay::Material" Collapsed="true">
+    <Position X="16" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AMIAiABQAEAMAAARAAAAAAAAAAAAQAAAAAEAIAkIKAA=</HashCode>
+      <FileName>SRay\Material.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRay::Mesh" Collapsed="true">
+    <Position X="1.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAABEAAAAAAAAEAQAAAAAIAAAAAQAAAEAAAAA=</HashCode>
+      <FileName>SRay\Mesh.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRay::Object" Collapsed="true">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAQAAAAQgAAAAAAAAAQAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>SRay\Object.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRay::Plan" Collapsed="true">
+    <Position X="3.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIgAEAQAAAAAIAAABAAAABAAAAAA=</HashCode>
+      <FileName>SRay\Plan.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRay::PointLight" Collapsed="true">
+    <Position X="14" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAABAAABAAAAAAAAAAAgAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>SRay\PointLight.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRay::Shape" Collapsed="true">
+    <Position X="6" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEBAAAAAAAAAAAAAAEAAABAAQIAAAAAAAAAEAIIAA=</HashCode>
+      <FileName>SRay\Shape.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRay::Sphere" Collapsed="true">
+    <Position X="8.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAIAAAAAAQEAAAAAAAKAAAAAIAAAAAIAAA=</HashCode>
+      <FileName>SRay\Sphere.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRay::Triangle" Collapsed="true">
+    <Position X="10.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAABAAAEAQAAAAAIAAAAACACAAAAAAI=</HashCode>
+      <FileName>SRay\Triangle.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestScenes" Collapsed="true">
+    <Position X="16" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BCAAAAAIAAAAAAAAAABQAAAAAAAIAAAAAAAAAAAABAA=</HashCode>
+      <FileName>TestScenes.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRay::Parser::ObjFile" Collapsed="true">
+    <Position X="12.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>iAAAgAgEAgAgAAAEAAAAAgAAAAAQAABAAIBAAACAAAA=</HashCode>
+      <FileName>Parser\ObjFile.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRay::Parser::TypeSectionHelper" Collapsed="true">
+    <Position X="12.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAABAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Parser\SceneParser.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRay::Parser::SceneParser" Collapsed="true">
+    <Position X="14.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABIEiAAAQAAAAAUEAAAACJEIEIAEQhjgAABBCADAAAo=</HashCode>
+      <FileName>Parser\SceneParser.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRay::Utility::Random" Collapsed="true">
+    <Position X="14.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAgAAABAAAACAAAAIAAAAABAAIQAIgAAAAAAA=</HashCode>
+      <FileName>Utility\Random.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SRay::Utility::TGAWriter" Collapsed="true">
+    <Position X="10.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAARIQAAAAAgAMBAAAAAAAQgAAAAAAAA=</HashCode>
+      <FileName>Utility\TGAWriter.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="SRay::color" Collapsed="true">
+    <Position X="3.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAQABAAAAAAA=</HashCode>
+      <FileName>SRay\Common.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SRay::fcolor" Collapsed="true">
+    <Position X="10.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAQAAAAAAAAAIAQAhAAAAAAA=</HashCode>
+      <FileName>SRay\Common.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SRay::position" Collapsed="true">
+    <Position X="14.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAABgAQAAAAA=</HashCode>
+      <FileName>SRay\Common.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SRay::Parser::s_section" Collapsed="true">
+    <Position X="8.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parser\SceneParser.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SRay::Utility::perlin" Collapsed="true">
+    <Position X="12.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAAAAAQAAEAAAAAAAAA=</HashCode>
+      <FileName>Utility\Perlin.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SRay::Utility::MersenneTwister::DSFMT_T" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Utility\MersenneTwister\dSFMT.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Typedef Name="SRay::ulong" Collapsed="true">
+    <Position X="3" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SRay\Common.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="SRay::uint" Collapsed="true">
+    <Position X="4.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SRay\Common.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="SRay::ushort" Collapsed="true">
+    <Position X="4.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SRay\Common.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="SRay::uchar" Collapsed="true">
+    <Position X="3" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SRay\Common.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="SRay::_float" Collapsed="true">
+    <Position X="1.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SRay\Common.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="SRay::dfloat" Collapsed="true">
+    <Position X="3" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SRay\Common.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="SRay::sfloat" Collapsed="true">
+    <Position X="4.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SRay\Common.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="SRay::pixel" Collapsed="true">
+    <Position X="3.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SRay\Common.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="SRay::pos_func" Collapsed="true">
+    <Position X="3" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SRay\Material.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="SRay::Parser::ParamMap" Collapsed="true">
+    <Position X="1.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parser\SceneParser.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="SRay::Parser::Section" Collapsed="true">
+    <Position X="8.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parser\SceneParser.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="SRay::Utility::MersenneTwister::genrand_t" Collapsed="true">
+    <Position X="6.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utility\MersenneTwister\test_dSFMT.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="SRay::Utility::MersenneTwister::st_genrand_t" Collapsed="true">
+    <Position X="1.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utility\MersenneTwister\test_dSFMT.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="SRay::Utility::MersenneTwister::fill_array_t" Collapsed="true">
+    <Position X="4.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utility\MersenneTwister\test_dSFMT.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="SRay::Utility::MersenneTwister::st_fill_array_t" Collapsed="true">
+    <Position X="6.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utility\MersenneTwister\test_dSFMT.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="SRay::Utility::MersenneTwister::uint32_t" Collapsed="true">
+    <Position X="6.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utility\MersenneTwister\dSFMT.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="SRay::Utility::MersenneTwister::uint64_t" Collapsed="true">
+    <Position X="1.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utility\MersenneTwister\dSFMT.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="SRay::Utility::MersenneTwister::w128_t" Collapsed="true">
+    <Position X="6.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utility\MersenneTwister\dSFMT.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="SRay::Utility::MersenneTwister::dsfmt_t" Collapsed="true">
+    <Position X="5.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utility\MersenneTwister\dSFMT.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Enum Name="SRay::TYPE_OBJECT" Collapsed="true">
+    <Position X="10.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAIEAAEAAAAgAEBAAQgACACAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>SRay\Object.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SRay::Parser::TYPE_SECTION" Collapsed="true">
+    <Position X="12.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAABAAABEAAAAAAABAAQACAAAAAAAAAIAAAAAAEAA=</HashCode>
+      <FileName>Parser\SceneParser.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

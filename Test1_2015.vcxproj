@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Parser\ObjFile.cpp" />
+    <ClCompile Include="Parser\SceneParser.cpp" />
+    <ClCompile Include="SRay\AreaLight.cpp" />
+    <ClCompile Include="SRay\Camera.cpp" />
+    <ClCompile Include="SRay\Common.cpp" />
+    <ClCompile Include="SRay\Cube.cpp" />
+    <ClCompile Include="SRay\Cylinder.cpp" />
+    <ClCompile Include="SRay\Light.cpp" />
+    <ClCompile Include="SRay\Material.cpp" />
+    <ClCompile Include="SRay\Mesh.cpp" />
+    <ClCompile Include="SRay\Object.cpp" />
+    <ClCompile Include="SRay\Plan.cpp" />
+    <ClCompile Include="SRay\PointLight.cpp" />
+    <ClCompile Include="SRay\Ray.cpp" />
+    <ClCompile Include="SRay\Scene.cpp" />
+    <ClCompile Include="SRay\Shape.cpp" />
+    <ClCompile Include="SRay\Sphere.cpp" />
+    <ClCompile Include="SRay\SRay.cpp" />
+    <ClCompile Include="SRay\Triangle.cpp" />
+    <ClCompile Include="SRay\Viewplane.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="Test1.cpp" />
+    <ClCompile Include="Utility\MersenneTwister\dSFMT.cpp" />
+    <ClCompile Include="Utility\MersenneTwister\test_dSFMT.cpp" />
+    <ClCompile Include="Utility\Perlin.cpp" />
+    <ClCompile Include="Utility\Random.cpp" />
+    <ClCompile Include="Utility\TGAWriter.cpp" />
+    <ClCompile Include="Utility\Utility.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Parser\ObjFile.h" />
+    <ClInclude Include="Parser\SceneParser.h" />
+    <ClInclude Include="SRay\AreaLight.h" />
+    <ClInclude Include="SRay\Camera.h" />
+    <ClInclude Include="SRay\Common.h" />
+    <ClInclude Include="SRay\Cube.h" />
+    <ClInclude Include="SRay\Cylinder.h" />
+    <ClInclude Include="SRay\Light.h" />
+    <ClInclude Include="SRay\Material.h" />
+    <ClInclude Include="SRay\Mesh.h" />
+    <ClInclude Include="SRay\Object.h" />
+    <ClInclude Include="SRay\Plan.h" />
+    <ClInclude Include="SRay\PointLight.h" />
+    <ClInclude Include="SRay\Ray.h" />
+    <ClInclude Include="SRay\Scene.h" />
+    <ClInclude Include="SRay\Shape.h" />
+    <ClInclude Include="SRay\Sphere.h" />
+    <ClInclude Include="SRay\SRay.h" />
+    <ClInclude Include="SRay\Triangle.h" />
+    <ClInclude Include="SRay\Viewplane.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="TestScenes.h" />
+    <ClInclude Include="Utility\MersenneTwister\dSFMT-common.h" />
+    <ClInclude Include="Utility\MersenneTwister\dSFMT-params.h" />
+    <ClInclude Include="Utility\MersenneTwister\dSFMT-params19937.h" />
+    <ClInclude Include="Utility\MersenneTwister\dSFMT.h" />
+    <ClInclude Include="Utility\Perlin.h" />
+    <ClInclude Include="Utility\Random.h" />
+    <ClInclude Include="Utility\TGAWriter.h" />
+    <ClInclude Include="Utility\Utility.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A5C61E5B-3CEA-4828-9AE7-5229712E23C2}</ProjectGuid>
+    <RootNamespace>Test1</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectName>Test1</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/I "SRay" /D "_CRT_SECURE_NO_WARNINGS"  /D "HAVE_SSE2" %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <BrowseInformation>true</BrowseInformation>
+      <CompileAsManaged>false</CompileAsManaged>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Link>
+    <Bscmake>
+      <PreserveSBR>true</PreserveSBR>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/I "SRay" /D "_CRT_SECURE_NO_WARNINGS"  /D "HAVE_SSE2" %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <PreprocessToFile>false</PreprocessToFile>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(OutDir)\$(TargetFileName) $(OutDir)\sray.exe</Command>
+      <Message>Referencement SRAY release last build</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,2 @@
+voir scene6: 4plans se croisent et aux intersections c'est noir (pas d'intersection mais seulement pour le calcul d'ombrage?)
+quand un rayon et perpendiculaire à la surface d'une sphere, le test d'intersection ne réussit pas
