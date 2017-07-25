@@ -23,6 +23,8 @@ public:
 	RayTracer(uint pWidth=0, uint pHeight=0);
 	~RayTracer(void);
 	void init();
+	void initPixelBuffer();
+	INLINE void freePixelBuffer();
 	int Render(void);
 
 	void setScene(Scene *pScene) {m_scene = *pScene;}
@@ -52,7 +54,7 @@ protected:
 
 public:
 //protected:
-	color *m_image;
+	color *m_image = NULL;
 
 protected:
 	Scene		m_scene;

@@ -4348,3 +4348,32 @@ SRAY INIT ENGINE 0px/0px
 SRAY RENDER 640px/480px
 ==================================
  320:240 intersect @0.000 10.000 20.000 (60.000000) sur fond (RENTRANT) level0
+
+
+SRAY INIT ENGINE 0px/0px
+==================================
+SRAY RENDER 640px/480px
+==================================
+
+
+SRAY INIT ENGINE 0px/0px
+==================================
+SRAY RENDER 640px/480px
+==================================
+ 320:240 intersect @2.804 2.804 21.955 (22.173808) sur sphere_verre (RENTRANT) level0
+ 320:240 intersect @-1.591 -1.591 29.465 (9.748592) sur sphere_verre (SORTANT) level1
+ 320:240 intersect @-25.000 -25.000 83.177 (63.094972) sur  (RENTRANT) level2
+
+
+SRAY INIT ENGINE 0px/0px
+==================================
+SRAY RENDER 640px/480px
+==================================
+ 320:240 intersect @-17.647 0.000 -8.824 (136.337092) sur plan (RENTRANT) level0
+
+
+SRAY INIT ENGINE 0px/0px
+==================================
+SRAY RENDER 640px/480px
+==================================
+ 320:240 intersect @0.000 -10.000 80.000 (120.933866) sur plan (RENTRANT) level0
