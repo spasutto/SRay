@@ -187,6 +187,9 @@ namespace SRay
 		//for (uchar pouet=0; pouet<level; pouet++)debug_log(" ");
 		//debug_log("launchRay({%2.3f %2.3f %2.3f} => {%2.3f %2.3f %2.3f}):", pRay.m_origin.x, pRay.m_origin.y, pRay.m_origin.z, pRay.m_direction.x, pRay.m_direction.y, pRay.m_direction.z);
 
+		if (level++ >= nrec)
+			return tmpColor;
+
 		// parcours des objets de la scène
 		for (i = 0; i < m_scene.m_shapes.size(); i++)
 		{
@@ -245,7 +248,7 @@ namespace SRay
 			}
 		}
 
-		if ((level++ < nrec) && ((FirstObj->m_material->kReflec > 0.0f) || (FirstObj->m_material->kRefrac > 0.0f)))
+		if ((FirstObj->m_material->kReflec > 0.0f) || (FirstObj->m_material->kRefrac > 0.0f))
 		{
 			Incident = pRay.m_direction.getNormalized();
 			pRay.m_origin = intersect;
