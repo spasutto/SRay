@@ -1,4 +1,4 @@
-![sample rendering](https://github.com/spasutto/SRay/blob/master/doc/scene6.png?raw=true | width=800)
+<img src="https://github.com/spasutto/SRay/blob/master/doc/scene6.png?raw=true" width="800" height="600" alt="sample rendering">
 
 Version "boules de noël": commit 29
 
