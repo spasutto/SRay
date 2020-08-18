@@ -1,22 +1,24 @@
-Version "boules de noël": commit 29
+![sample rendering](https://github.com/spasutto/SRay/blob/master/doc/scene6.png?raw=true | width=800)
+
+Version "boules de noÃ«l": commit 29
 
 Illumination Locale I:
 ======================
 I=R+T
-R: fraction réfléchie
+R: fraction rÃ©flÃ©chie
 T: fraction transmise
 L'absorption n'est pas prise en compte.
 
 R=Diffuse+Specular
 
-Les réfractions font parties de la fraction transmise T, le reste est dans la fraction réfléchie R.
-R comprend donc un mélange de réflexion pure et de coloration locale au matériau composée elle même de réfléxion diffuse et de réflexion speculaire. Le coefficient de spécularité n'influe pas sur sur la partie spéculaire de la coloration, seulement sur la fraction de lumière réfléchie venant du reste de la scène.
+Les rÃ©fractions font parties de la fraction transmise T, le reste est dans la fraction rÃ©flÃ©chie R.
+R comprend donc un mÃ©lange de rÃ©flexion pure et de coloration locale au matÃ©riau composÃ©e elle mÃªme de rÃ©flÃ©xion diffuse et de rÃ©flexion speculaire. Le coefficient de spÃ©cularitÃ© n'influe pas sur sur la partie spÃ©culaire de la coloration, seulement sur la fraction de lumiÃ¨re rÃ©flÃ©chie venant du reste de la scÃ¨ne.
 
 
 ==========
 TODO:
 ==========
- - Normaliser le rayon à chaque itération (et non dans les fonctions intersect des Shape)
+ - Normaliser le rayon Ã  chaque itÃ©ration (et non dans les fonctions intersect des Shape)
 
 
 
@@ -24,12 +26,12 @@ TODO:
 ==========
 NOTIONS
 ==========
-ambient, diffus, spéculaire
-réflexion spéculaire: réfléxion dans une direction particulière (réflexion "mirroir" par rapport à la normale)
-réflexion diffuse : réflexion dans plusieurs directions à la fois
+ambient, diffus, spÃ©culaire
+rÃ©flexion spÃ©culaire: rÃ©flÃ©xion dans une direction particuliÃ¨re (rÃ©flexion "mirroir" par rapport Ã  la normale)
+rÃ©flexion diffuse : rÃ©flexion dans plusieurs directions Ã  la fois
 blinn, phong, lambert
-diffuse interreflection (color bleeding, effet de lumière portée colorée par réflexion ou réfraction sur un objet coloré)
-reflectance/transmittance (fraction d'énergie incidente qui est réfléchit ou transmis à travers le materiaux). Pour un matériau, elles dépendent de la longueur d'onde
+diffuse interreflection (color bleeding, effet de lumiÃ¨re portÃ©e colorÃ©e par rÃ©flexion ou rÃ©fraction sur un objet colorÃ©)
+reflectance/transmittance (fraction d'Ã©nergie incidente qui est rÃ©flÃ©chit ou transmis Ã  travers le materiaux). Pour un matÃ©riau, elles dÃ©pendent de la longueur d'onde
 
 Utah Teapot, Standford bunny, Cornell box
 
@@ -38,6 +40,6 @@ Practical guide photon mapping
 ===========
 diffuse surface? (p15)
 diffuse point light (p15)
-page 21 paragraphe 2: sens des équations pour tenir compte de la probabilité de survie
+page 21 paragraphe 2: sens des Ã©quations pour tenir compte de la probabilitÃ© de survie
 page 25: multiple scattering, anisotropic scattering
 
