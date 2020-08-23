@@ -442,6 +442,16 @@ void SceneParser::LoadMat()
 				ParseFloat(it->second.c_str(), &tmpDouble[0]);
 				tmpMat->setIndice((_float)tmpDouble[0]);
 			}
+			else if (it->first == "disp")
+			{
+				if (strcmp(it->second.c_str(), "perlin") == 0)
+					tmpMat->displacement_func = perlin_noise;
+				else
+				{
+					sprintf(errBuff, "type de fonction de deplacement inconnue \"%s\"", it->second.c_str());
+					throw std::runtime_error(errBuff);
+				}
+			}
 			else
 			{
 				sprintf(errBuff, ERRBUFF, it->first.c_str());

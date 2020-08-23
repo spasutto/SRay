@@ -4,8 +4,8 @@ RT
 {
 	width : 320
 	height : 240
-#aa_level:30
-aa_level:2
+aa_level:30
+#aa_level:2
 }
 CAMERA
 {

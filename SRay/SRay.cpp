@@ -209,16 +209,16 @@ namespace SRay
 			}
 		}
 
-		if (FirstObj == NULL)
-			return tofcolor(ambient);
-
-
 		if (x == 320 && y == 240)
 		{
-			debug_log(" %03d:%03d intersect @%2.3f %2.3f %2.3f (%f) sur %s (%s) level%d\n", x, y, intersect.x, intersect.y, intersect.z, objDist, FirstObj->m_name, bSortant ? "SORTANT" : "RENTRANT", level);
+			debug_log(" %03d:%03d %sintersect @%2.3f %2.3f %2.3f (%f) sur %s (%s) level%d\n", x, y, bIntersect?"":"no ", intersect.x, intersect.y, intersect.z, objDist, FirstObj == NULL?"???": FirstObj->m_name, bSortant ? "SORTANT" : "RENTRANT", level);
 			//FIXME: pourquoi lorsque le rayon et la normale sont colinéaires mais de sens opposés, l'intersection avec la sphère ne se fait pas?
 			//FirstObj = m_scene.m_shapes("sphere");
 		}
+
+		if (FirstObj == NULL)
+			return tofcolor(ambient);
+
 
 		//if ((x == 215 || x == 215) && y == 150)
 		//	debug_log(" %03d:%03d intersect @%2.3f %2.3f %2.3f sur %s (%s) level%d\n", x, y, intersect.x, intersect.y, intersect.z, FirstObj->m_name, bSortant?"SORTANT":"RENTRANT", level);

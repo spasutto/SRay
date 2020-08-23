@@ -3,6 +3,7 @@
 #include "../SRay/Common.h"
 #include "../SRay/SRay.h"
 #include "../Utility/Utility.h"
+#include "../Utility/Perlin.h"
 #include "ObjFile.h"
 #include <stdio.h>
 #include <vector>

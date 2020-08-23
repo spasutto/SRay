@@ -44,6 +44,7 @@ MAT
 	b:255
 	kspec : 0#.1
 	kshin : 50
+	disp : perlin
 }
 
 MAT

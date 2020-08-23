@@ -34,7 +34,7 @@ namespace SRay
 				return false;
 			thc = L.Length();
 			thc = thc*thc - tca*tca;
-			if (thc < 0.0f || (thc > m_radius2))
+			if (/*thc < 0.0f || */(thc > m_radius2))
 				return false;
 			thc = m_radius2 - thc;
 			if (thc < 0.0f)
