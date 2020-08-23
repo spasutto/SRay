@@ -5,6 +5,8 @@
 #include <vector>
 #include <stdexcept>
 
+#include "../Utility/CodeStat.h"
+
 //#define SR_LOG
 #define N_AIR	1.0f							//indice de l'air
 #define DEFAULT_FOV 45.0f				// champ de vision
@@ -117,6 +119,7 @@ public:
 
 	INLINE void Normalize()
 	{
+		CS_FSTART(Vector::Normalize);
 		length = sqrt(x*x + y*y + z*z); //Length();
 		if (length == 0.0f)
 			x=y=z=0.0f;
@@ -126,6 +129,7 @@ public:
 			y/=length;
 			z/=length;
 		}
+		CS_FEND();
 	}
 	INLINE Vector getNormalized()
 	{

@@ -98,6 +98,7 @@
     <ClCompile Include="Utility\MersenneTwister\dSFMT.cpp">
       <Filter>Utility\MersenneTwister</Filter>
     </ClCompile>
+    <ClCompile Include="Utility\CodeStat.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Utility\Utility.h">
@@ -186,6 +187,7 @@
     <ClInclude Include="Utility\MersenneTwister\dSFMT-params19937.h">
       <Filter>Utility\MersenneTwister</Filter>
     </ClInclude>
+    <ClInclude Include="Utility\CodeStat.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

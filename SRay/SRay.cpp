@@ -36,6 +36,7 @@ namespace SRay
 
 	void RayTracer::init()
 	{
+		CS_FSTART(RayTracer::init);
 		if (!getWidth() || !getHeight())
 			return;
 		if (aa > 1)
@@ -47,6 +48,7 @@ namespace SRay
 		initPixelBuffer();
 		clearScene(false);
 		bInitOK = true;
+		CS_FEND();
 	}
 
 	RayTracer::RayTracer(uint pWidth, uint pHeight)
@@ -64,6 +66,7 @@ namespace SRay
 	uint x = 0, y = 0;
 	int RayTracer::Render(void)
 	{
+		CS_FSTART(RayTracer::Render);
 		if (!bInitOK)
 			init();
 		Ray primaryray;
@@ -163,11 +166,13 @@ namespace SRay
 			}
 		}
 #endif
+		CS_FEND();
 		return 0;
 	}
 
 	fcolor RayTracer::launchRay(Ray &pRay, uchar level, double nprec)
 	{
+		CS_FSTART(RayTracer::launchRay);
 		Ray lightray;
 		double objDist = 0.0f, objDisttemp = 0.0f;
 		float lightVisibility = 0.0f;
@@ -360,6 +365,8 @@ namespace SRay
 
 		//for (uchar pouet=0; pouet<level; pouet++)debug_log(" ");
 		//debug_log("   color: %d %d %d\n", tmpColor.r, tmpColor.g, tmpColor.b);
+
+		CS_FEND();
 		return tmpColor;
 	}
 

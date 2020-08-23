@@ -6,10 +6,13 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test1", "Test1.vcxproj", "{
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug_CS|Win32 = Debug_CS|Win32
 		Debug|Win32 = Debug|Win32
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5C61E5B-3CEA-4828-9AE7-5229712E23C2}.Debug_CS|Win32.ActiveCfg = Debu_WithoutCS|Win32
+		{A5C61E5B-3CEA-4828-9AE7-5229712E23C2}.Debug_CS|Win32.Build.0 = Debu_WithoutCS|Win32
 		{A5C61E5B-3CEA-4828-9AE7-5229712E23C2}.Debug|Win32.ActiveCfg = Debug|Win32
 		{A5C61E5B-3CEA-4828-9AE7-5229712E23C2}.Debug|Win32.Build.0 = Debug|Win32
 		{A5C61E5B-3CEA-4828-9AE7-5229712E23C2}.Release|Win32.ActiveCfg = Release|Win32

@@ -6,6 +6,8 @@
 #include <cctype>
 #include <stdarg.h>
 
+#include "CodeStat.h"
+
 namespace SRay
 {
 namespace Utility
