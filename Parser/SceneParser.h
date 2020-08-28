@@ -9,6 +9,7 @@
 #include <vector>
 #include <map>
 #include <string>
+#include <memory>
 
 using namespace std;
 using namespace SRay::Utility;

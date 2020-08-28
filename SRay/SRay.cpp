@@ -182,10 +182,6 @@ namespace SRay
 		Vector Normale; // la normale au point d'intersection
 		Vector Incident; // le vecteur incident au point d'intersection
 		fcolor reflecColor = { 0.0f, 0.0f, 0.0f }, refracColor = { 0.0f, 0.0f, 0.0f }, specColor = { 0.0f, 0.0f, 0.0f }, tmpColor = { kAmbient, kAmbient, kAmbient };// tofcolor(ambient);
-		//getc(stdin);
-		//if (level == 0) debug_log("\n");
-		//for (uchar pouet=0; pouet<level; pouet++)debug_log(" ");
-		//debug_log("launchRay({%2.3f %2.3f %2.3f} => {%2.3f %2.3f %2.3f}):", pRay.m_origin.x, pRay.m_origin.y, pRay.m_origin.z, pRay.m_direction.x, pRay.m_direction.y, pRay.m_direction.z);
 
 		if (level++ >= nrec)
 			return tmpColor;
@@ -193,42 +189,21 @@ namespace SRay
 		// parcours des objets de la scène
 		for (i = 0; i < m_scene.m_shapes.size(); i++)
 		{
-			//debug_log("%d %d %d\n", x,y,i);
 			bIntersect = m_scene.m_shapes[i]->Intersect(pRay, &tempdist, &tempintersect, &bTempSortant);
 			if ((bIntersect) && ((tempdist < objDist || objDist == 0)))
 			{
-				// DEBUG: les rayons sortant de la sphere ne sont pas interceptés par celle-ci
-				//if (level > 0 && strcmp(m_scene.m_shapes[i]->m_name, "sphere_verre") == 0)
-				//	continue;
 				FirstObj = m_scene.m_shapes[i];
 				objDist = tempdist;
 				bSortant = bTempSortant;
 				intersect = tempintersect;
 				Normale = FirstObj->m_normal;
-				//break;
 			}
-		}
-
-		if (x == 320 && y == 240)
-		{
-			debug_log(" %03d:%03d %sintersect @%2.3f %2.3f %2.3f (%f) sur %s (%s) level%d\n", x, y, bIntersect?"":"no ", intersect.x, intersect.y, intersect.z, objDist, FirstObj == NULL?"???": FirstObj->m_name, bSortant ? "SORTANT" : "RENTRANT", level);
-			//FIXME: pourquoi lorsque le rayon et la normale sont colinéaires mais de sens opposés, l'intersection avec la sphère ne se fait pas?
-			//FirstObj = m_scene.m_shapes("sphere");
 		}
 
 		if (FirstObj == NULL)
 			return tofcolor(ambient);
 
-
-		//if ((x == 215 || x == 215) && y == 150)
-		//	debug_log(" %03d:%03d intersect @%2.3f %2.3f %2.3f sur %s (%s) level%d\n", x, y, intersect.x, intersect.y, intersect.z, FirstObj->m_name, bSortant?"SORTANT":"RENTRANT", level);
-		//if (bSortant) debug_log("\nSORTANT level=%02d x=%03d y=%03d (%s)", level, x, y, FirstObj->m_name);
-
-		//FirstObj->Normal(intersect, Normale);
-
-		/*Normale.x += 0.01f - 1 * (float(rand() % 100) / 1000.0f);
-		Normale.y += 0.01f - 1 * (float(rand() % 100) / 1000.0f);
-		Normale.z += 0.01f - 1 * (float(rand() % 100) / 1000.0f);*/
+		// Gestion du bruit (Perlin)
 		if (FirstObj->m_material->displacement_func != NULL)
 		{
 			float noiseCoefx = float(FirstObj->m_material->displacement_func(0.1 * double(tempintersect.x), 0.1 * double(tempintersect.y), 0.1 * double(tempintersect.z)));
@@ -248,6 +223,7 @@ namespace SRay
 			}
 		}
 
+		// Reflections/Réfractions
 		if ((FirstObj->m_material->kReflec > 0.0f) || (FirstObj->m_material->kRefrac > 0.0f))
 		{
 			Incident = pRay.m_direction.getNormalized();
@@ -256,10 +232,7 @@ namespace SRay
 				&& FirstObj->m_material->kReflec > 0.0f
 				&& FirstObj->m_material->kSpecular > 0.0f)
 			{
-				//pRay.m_direction = 2*Normale*(Normale.dotProduct(-pRay.m_direction))+pRay.m_direction;
 				pRay.m_direction = Incident.reflect(Normale).getNormalized();
-				//for (uchar pouet=0; pouet<level; pouet++)debug_log(" ");
-				//debug_log("  -reflexion: norm={%2.3f %2.3f %2.3f} @ {%2.3f %2.3f %2.3f}\n",Normale.x, Normale.y, Normale.z,intersect.x,intersect.y,intersect.z);
 				reflecColor = launchRay(pRay, level);
 			}
 			if (FirstObj->m_material->kRefrac > 0.0f)

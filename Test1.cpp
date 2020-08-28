@@ -47,7 +47,7 @@ void testParse()
 				printf("\t%s:%s\n", it->first.c_str(), it->second.c_str());
 		}*/
 	}
-	catch (std::exception &e)
+	catch (const std::exception &e)
 	{
 		printf  ("EXCEPTION :: %s\n", e.what());
 		printf(errBuff);
@@ -78,7 +78,6 @@ int main(int argc, char* argv[])
 	*/
 	tmpDbgFlag = _CrtSetDbgFlag(_CRTDBG_REPORT_FLAG);
 	tmpDbgFlag |= _CRTDBG_DELAY_FREE_MEM_DF;
-	tmpDbgFlag |= _CRTDBG_LEAK_CHECK_DF;
 	_CrtSetDbgFlag(tmpDbgFlag);
 
 	/*
@@ -88,14 +87,15 @@ int main(int argc, char* argv[])
 	tmpDbgFlag = _CrtSetDbgFlag(_CRTDBG_REPORT_FLAG);
 	tmpDbgFlag |= _CRTDBG_ALLOC_MEM_DF;
 	tmpDbgFlag &= ~_CRTDBG_DELAY_FREE_MEM_DF;
+	tmpDbgFlag |= _CRTDBG_LEAK_CHECK_DF;
 	_CrtSetDbgFlag(tmpDbgFlag);
+	//_CrtSetBreakAlloc(184);
 #endif
 
-	char buff[512], buff2[512], buff3[512], buff4[128], *ptr;
+	char buff[512], buff2[512], buff3[512], buff4[128], * ptr;
 	clock_t start;
 
 	srand((uint)time(0));
-	vector<double> vtemps;
 	double temps = 0.0f;
 	if (argc <= 1)
 	{
@@ -105,93 +105,46 @@ int main(int argc, char* argv[])
 	}
 	try
 	{
-		//RayTracer raytracer(6800, 5100);
 		RayTracer raytracer;
 		system("mkdir out 2>NUL");
-		for (int iter = 1; iter<2; iter++)
-		{
-			strcpy(buff, argv[1]);
-			//strcpy(buff, "C:\\boulot\\0-Projets\\sray\\bin\\scene0 - Copie.srs");
-			if (iter == 1)
-			{
-				SceneParser sf(buff, &raytracer);
-				//SceneParser sf("scene2_invalid.srs");
-				sf.Load();
-			}
-			//raytracer.getScene()->Add(new Cube("cube", { 1, 1, 1 }, Vector(-5.0f, 0.0f, 0), Vector(5.0f, 10.0f, 0)));
+		strcpy(buff, argv[1]);
+		SceneParser sf(buff, &raytracer);
+		sf.Load();
 
-			/*Shape* obj = raytracer.getScene()->m_shapes("sphere_rouge_petite");
-			if (obj)
-				obj->m_material->nIndice += 0.5f;*/
-			/*Material *mat;
-			for (uint i = 0; i < raytracer.getScene()->m_materials.size(); i++)
-			{
-				mat = raytracer.getScene()->m_materials[i];// ("rouge");
-				if (mat)
-					mat->displacement_func = perlin_noise;		// on initialise la fonction de bruit avec la fonction de perlin
-			}*/
-
-			//raytracer.getScene()->Add(new Cube());
-			//TestScenes::scene3spheresanim(&raytracer, i);
-			//TestScenes::scene3spheres(&raytracer);
-			start = clock();
-			raytracer.Render();
-			temps = ((double)(clock()-start))/CLK_TCK;
-			vtemps.push_back(temps);
-			sprintTps(buff4, temps);
-			sprintf(buff3, "temps de rendu no%03d: %s\n", iter, buff4);
-			printf(buff3);
-			ptr = strrchr(buff, '.');
-			if (ptr != NULL)
-				*ptr = 0;
-			ptr = strrchr(buff, '\\');
-			if (ptr != NULL)
-			{
-				strcpy(buff2, ptr + 1);
-				*(ptr + 1) = 0;
-			}
-			else
-			{
-				strcpy(buff2, buff);
-				buff[0] = 0;
-			}
-			//sprintf(buff, "out\\%s_%02d.tga", buff2, iter);
-			sprintf(buff, "%sout\\%s.tga", buff, buff2);
-			sprintf(buff2, "SRAY rendu no%02d (%dx%d) : %s", iter, raytracer.getWidth(), raytracer.getHeight(), buff4);
-			TGAWriter tga(raytracer.m_image, raytracer.getWidth(), raytracer.getHeight());
-			//write_tga(buff, raytracer.getWidth()*raytracer.getAALevel(), raytracer.getHeight()*raytracer.getAALevel(), raytracer.m_image_wk);
-			tga.print(buff2, 1, 1);
-			tga.write(buff);
-		}
-		temps = 0.0f;
-		for (uint i=0; i< vtemps.size(); i++)
-			temps += vtemps.at(i);
-		temps /= vtemps.size();
+		start = clock();
+		raytracer.Render();
+		temps = ((double)(clock() - start)) / CLK_TCK;
 		sprintTps(buff4, temps);
-		printf("temps de rendu moyen: %s\n", buff4);
+		sprintf(buff3, "temps de rendu %s\n", buff4);
+		printf(buff3);
+		ptr = strrchr(buff, '.');
+		if (ptr != NULL)
+			*ptr = 0;
+		ptr = strrchr(buff, '\\');
+		if (ptr != NULL)
+		{
+			strcpy(buff2, ptr + 1);
+			*(ptr + 1) = 0;
+		}
+		else
+		{
+			strcpy(buff2, buff);
+			buff[0] = 0;
+		}
+		sprintf(buff, "%sout\\%s.tga", buff, buff2);
+		sprintf(buff2, "SRAY rendu (%dx%d) : %s", raytracer.getWidth(), raytracer.getHeight(), buff4);
+		TGAWriter tga(raytracer.m_image, raytracer.getWidth(), raytracer.getHeight());
+		tga.print(buff2, 1, 1);
+		tga.write(buff);
+
 		sprintf(buff2, "\"%s\"", buff);
 		system(buff2);
-		//printf("generation terminee, appuyez sur une touche\n");getc(stdin);
 	}
-	catch (std::exception &e)
+	catch (std::exception& e)
 	{
-		printf  ("EXCEPTION :: %s\n", e.what());
+		printf("EXCEPTION :: %s\n", e.what());
 		getc(stdin);
 	}
-
-	//640*480
-	// nouvelle méthode (launchRay)
-	//temps de rendu moyen: 0.223738 s
-	// ancienne méthode (do while)
-	//temps de rendu moyen: 0.213678 s
-	//			==> +10 ms
-
-	//1024*768
-	// nouvelle méthode (launchRay)
-	//temps de rendu moyen: 0.572171 s
-	// ancienne méthode (do while)
-	//temps de rendu moyen: 0.557122 s
-	//			==> +15 ms
 
 	return 0;
 }
