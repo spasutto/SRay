@@ -108,36 +108,47 @@ int main(int argc, char* argv[])
 		RayTracer raytracer;
 		system("mkdir out 2>NUL");
 		strcpy(buff, argv[1]);
+
 		SceneParser sf(buff, &raytracer);
 		sf.Load();
 
-		start = clock();
-		raytracer.Render();
-		temps = ((double)(clock() - start)) / CLK_TCK;
-		sprintTps(buff4, temps);
-		sprintf(buff3, "temps de rendu %s\n", buff4);
-		printf(buff3);
-		ptr = strrchr(buff, '.');
-		if (ptr != NULL)
-			*ptr = 0;
-		ptr = strrchr(buff, '\\');
-		if (ptr != NULL)
-		{
-			strcpy(buff2, ptr + 1);
-			*(ptr + 1) = 0;
-		}
-		else
-		{
-			strcpy(buff2, buff);
-			buff[0] = 0;
-		}
-		sprintf(buff, "%sout\\%s.tga", buff, buff2);
-		sprintf(buff2, "SRAY rendu (%dx%d) : %s", raytracer.getWidth(), raytracer.getHeight(), buff4);
-		TGAWriter tga(raytracer.m_image, raytracer.getWidth(), raytracer.getHeight());
-		tga.print(buff2, 1, 1);
-		tga.write(buff);
+			ptr = strrchr(buff, '.');
+			if (ptr != NULL)
+				*ptr = 0;
+			ptr = strrchr(buff, '\\');
+			if (ptr != NULL)
+			{
+				*(ptr + 1) = 0;
+				strcpy(buff, ptr + 1);
+			}
 
-		sprintf(buff2, "\"%s\"", buff);
+			int iter = 0;
+		//for (int iter = 0; iter < 20 ; iter++)
+		{
+			start = clock();
+			raytracer.Render();
+			temps = ((double)(clock() - start)) / CLK_TCK;
+			sprintTps(buff4, temps);
+			printf("temps de rendu %s ==> ", buff4);
+			sprintf(buff4, "out\\%s_%02d.tga", buff, iter);
+			printf("%s\n", buff4);
+			sprintf(buff2, "SRAY rendu (%dx%d) : %s", raytracer.getWidth(), raytracer.getHeight(), buff4);
+			TGAWriter tga(raytracer.m_image, raytracer.getWidth(), raytracer.getHeight());
+			tga.print(buff2, 1, 1);
+			tga.write(buff4);
+
+			/*position campos;
+			Vector camdir;
+			campos = raytracer.getCamera()->getPos();		
+			campos.x += 2;
+			raytracer.getCamera()->setPos(campos);
+			raytracer.getCamera()->init();
+			printf("campos x=%.2f, y=%.2f, z=%.2f, \n", campos.x, campos.y, campos.z);
+			camdir = raytracer.getCamera()->getDirection();
+			printf("camdir x=%.2f, y=%.2f, z=%.2f, \n", camdir.x, camdir.y, camdir.z);*/
+		}
+
+		sprintf(buff2, "\"%s\"", buff4);
 		system(buff2);
 	}
 	catch (std::exception& e)

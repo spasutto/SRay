@@ -320,12 +320,6 @@ namespace SRay
 			}
 		}
 
-		//diff /= m_scene.m_lights.size();
-		//diff *= m_ambient;
-		//SATURATE(diff);
-
-		_float kInd = 1 - FirstObj->m_material->kReflec - FirstObj->m_material->kRefrac;
-		if (kInd < 0.0f) kInd = 0.0f;
 		reflecColor *= FirstObj->m_material->kSpecular;
 		tmpColor.r = (specColor.r + ((tmpColor.r + reflecColor.r)*FirstObj->m_material->kReflec) + (refracColor.r*FirstObj->m_material->kRefrac));
 		tmpColor.g = (specColor.g + ((tmpColor.g + reflecColor.g)*FirstObj->m_material->kReflec) + (refracColor.g*FirstObj->m_material->kRefrac));
